@@ -11,16 +11,16 @@
         <!-- Login form -->
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="login.php" method="get">
+            <form action="login.php" method="get" id="loginForm">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" id="email-login" required>
                     <label>Email</label>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" id="password-login" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
@@ -37,28 +37,28 @@
         <!-- Register form -->
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="register.php" method="post">
+            <form action="register.php" method="post" id="registerForm">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" id="FirstName" name="firstName" required>
+                    <input type="text" id="FirstName-register" name="firstName" required>
                     <label>First name</label>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" id="lastName" name="lastName" required>
+                    <input type="text" id="lastName-register" name="lastName" required>
                     <label>Last name</label>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" id="email" name="email"required>
+                    <input type="email" id="email-register" name="email"required>
                     <label>Email</label>
                 </div>
 
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password-register" name="password" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
@@ -71,6 +71,8 @@
             </form>
         </div>
     </div>
+    <script src="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbmZURkRrRF8yT3F0TGhBLUl0QmZBSGJ5QldzUXxBQ3Jtc0tuRXpFdG03MlgwQ3BXR0w0TFpzNWdhNnNqYUhKNTJoYWI3Q0NScVprS0NKaVVtTXktNEU4dTNPcVVNNFlNNUlIbjc3ODFQX3d4eGZzOXpWdUw3NXB2QjFxR3Q4bHdKbUtzZGNPa2tVNGItZmIya29kYw&q=https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Ffirebase%2F7.14.1-0%2Ffirebase.js&v=RAWHXRTKTHw"></script>
+    <script src="../../Back-end/Users.js"></script>
     <script src="../Scripts/login_script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
