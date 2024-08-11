@@ -30,6 +30,7 @@ header{
     font-weight: bold;
     color: black;
     padding: 0 10px;
+    z-index: 2;
 }
 
 .navigation a::after{
@@ -44,6 +45,27 @@ header{
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s;
+    z-index: 1;
+}
+
+.navigation a::before{
+    content: '';
+    background: black;
+    width: 140%;
+    height: 220%;
+    top: 100%;
+    left: 50%;
+    position: absolute;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.2s ease-in;
+}
+
+.navigation a:hover::before{
+    opacity: 0.1;
+    top: 50%;
 }
 
 .navigation .Home:hover{
@@ -87,11 +109,11 @@ header{
 }
 
 .navigation .Car:hover{
-    color: #46B3A5;
+    color: #46b36a;
 }
 
 .navigation .Car::after{
-    background: #46B3A5;
+    background: #46b36a;
 }
 
 .navigation a:hover::after{
