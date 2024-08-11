@@ -1,6 +1,100 @@
 *{
-    margin: 10px;
-    padding: 10px;
     font-family: sans-serif;
     box-sizing: border-box;
+    background-color: #add8e6;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+} 
+
+.logo{
+    user-select: none;
+    
+}
+
+.navigation a{
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-left: 50px;
+    font-weight: bold;
+    color: black;
+    padding: 0 10px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.navigation .Home:hover{
+    color: black;
+}
+
+.navigation .Home::after{
+    background: black;
+}
+
+.navigation .Electricity:hover{
+    color: #F6D68D;
+}
+
+.navigation .Electricity::after{
+    background: #F6D68D;
+}
+
+.navigation .Gas:hover{
+    color: darkslategrey
+}
+
+.navigation .Gas::after{
+    background: darkslategray;
+}
+
+.navigation .Water:hover{
+    color: #2E6D92;
+}
+
+.navigation .Water::after{
+    background: #2E6D92;
+}
+
+.navigation .Property:hover{
+    color:#8F30A1;
+}
+
+.navigation .Property::after{
+    background:#8F30A1;
+}
+
+.navigation .Car:hover{
+    color: #46B3A5;
+}
+
+.navigation .Car::after{
+    background: #46B3A5;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
 }
