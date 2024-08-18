@@ -18,8 +18,8 @@ header{
 
 .border{
     display: flex;
-    position: absolute;
-    top: 10%;
+    position: fixed;
+    top: 8%;
     left: 2%;
     width: 96%;
     height: 3px;
@@ -60,8 +60,8 @@ header{
 .navigation a::before{
     content: '';
     background: #252525;
-    width: 140%;
-    height: 220%;
+    width: 150%;
+    height: 240%;
     top: 100%;
     left: 50%;
     position: absolute;
@@ -73,7 +73,7 @@ header{
 }
 
 .navigation a:hover::before{
-    opacity: 0.2;
+    opacity: 0.25;
     top: 50%;
 }
 
@@ -148,8 +148,9 @@ header{
     height: 400px;
     border-radius: 20px;
     margin-left: 100px;
-    margin-top: 20px;
+    margin-top: 50px;
     overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .card::before{
@@ -172,7 +173,52 @@ header{
 .card::after{
     content: '';
     position: absolute;
-    inset: 5px;
+    inset: 3px;
     border-radius: 18px;
-    background: rgba(45,45,45,0.05);
+    background: rgba(45,45,45,0.01);
+}
+
+.card a{
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    width: 100%;
+    color: #252525;
+    margin-top: 30px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.card a:hover{
+    font-weight: bold;
+}
+
+.inner-border{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5%;
+    width: 90%;
+    height: 1px;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    border-radius: 50px;
+}
+
+.billing-info{
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+.billing-info h4{
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    margin-top: 40px;
+    font-size: 16px;
 }
