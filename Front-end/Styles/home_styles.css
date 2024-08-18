@@ -41,7 +41,7 @@ header{
     padding: 0 10px;
     z-index: 2;
 }
- 
+
 .navigation a::after{
     content: '';
     position: absolute;
