@@ -1,7 +1,7 @@
 *{
     font-family: sans-serif;
     box-sizing: border-box;
-    background-color: #add8e6;
+    background-color: #F5F5F5;
 }
 
 header{
@@ -15,6 +15,19 @@ header{
     align-items: center;
     z-index: 1;
 } 
+
+.border{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 96%;
+    height: 3px;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    border-radius: 50px;
+}
 
 .navigation a{
     position: relative;
@@ -45,7 +58,7 @@ header{
 
 .navigation a::before{
     content: '';
-    background: black;
+    background: #252525;
     width: 140%;
     height: 220%;
     top: 100%;
@@ -59,7 +72,7 @@ header{
 }
 
 .navigation a:hover::before{
-    opacity: 0.1;
+    opacity: 0.2;
     top: 50%;
 }
 
@@ -72,19 +85,19 @@ header{
 }
 
 .navigation .Electricity:hover{
-    color: #F6D68D;
+    color: #F8E16C;
 }
 
 .navigation .Electricity::after{
-    background: #F6D68D;
+    background: #F8E16C;
 }
 
 .navigation .Gas:hover{
-    color: darkslategrey
+    color: #156064;
 }
 
 .navigation .Gas::after{
-    background: darkslategray;
+    background: #156064;
 }
 
 .navigation .Water:hover{
@@ -104,14 +117,61 @@ header{
 }
 
 .navigation .Car:hover{
-    color: #46b36a;
+    color: #00C49A;
 }
 
 .navigation .Car::after{
-    background: #46b36a;
+    background: #00C49A;
 }
 
 .navigation a:hover::after{
     transform-origin: left;
     transform: scaleX(1);
+}
+
+.container{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 150px;
+}
+
+.top-container, .bottom-container {
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 10px; 
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%,-50%);
+    background: radial-gradient(var(--clr), transparent, transparent);
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: 0.3s, top 0s, left 0s;
+}
+
+.card:hover::before{
+    opacity: 1;
+}
+
+.card::after{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 18px;
+    background: rgba(45,45,45,0.05);
 }
