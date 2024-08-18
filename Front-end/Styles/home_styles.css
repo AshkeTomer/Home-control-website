@@ -19,7 +19,7 @@ header{
 .border{
     display: flex;
     position: absolute;
-    top: 8%;
+    top: 10%;
     left: 2%;
     width: 96%;
     height: 3px;
