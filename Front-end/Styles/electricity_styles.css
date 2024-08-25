@@ -1,0 +1,57 @@
+html, body {
+    height: 90%;
+    margin: 0;
+    padding: 0; /* Ensure no extra padding around the body */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px); /* Adjust height to fill the viewport minus the header and border space */
+    padding: 20px;
+    background-color: #e0e0e0;
+    box-sizing: border-box;
+    margin-top: 120px; /* Margin-top to offset the fixed header and border */
+}
+
+.hello-msg {
+    background-color: purple;
+    margin-bottom: 10px; /* Space between hello-msg and other content */
+}
+
+.hello-msg p {
+    margin-left: 10%;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: red;
+    padding: 10px;
+    height: 60px;
+    width: 500px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex: 1; /* Allow the main content to grow and fill the remaining space */
+}
+
+.general-graphs {
+    flex: 1; /* Takes up half of the container's width */
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.general-billing {
+    flex: 1; /* Takes up the other half of the container's width */
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
