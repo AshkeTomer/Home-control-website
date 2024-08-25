@@ -31,12 +31,12 @@ const regSubmit = document.getElementById("submit-register").value;
 
 // Register
 regSubmit.addEventListener("click", function(event) {
- event.preventDefault();
+event.preventDefault();
 
- const regEmail = document.getElementById("email-register").value;
- const regPassword = document.getElementById("password-register").value;
+const regEmail = document.getElementById("email-register").value;
+const regPassword = document.getElementById("password-register").value;
 
- createUserWithEmailAndPassword(auth, regEmail, regPassword)
+createUserWithEmailAndPassword(auth, regEmail, regPassword)
   .then((userCredential) => {
     const user = userCredential.user;
     alert("Creating your account...");
